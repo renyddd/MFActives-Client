@@ -1,7 +1,7 @@
 // miniprogram/pages/me/me.js
 var app = getApp();
 Page({
-
+ 
   actioncnt: function() {        
     wx.showActionSheet({            
       itemList:  ['群聊',  '好友',  '朋友圈'],
@@ -51,10 +51,11 @@ Page({
       url: '../advance/advance',
     })
   },
-
-
-  clickInvitivation: function(event) {
-    this.actioncnt();
+  // 申请发布
+  onPushClick:function(event){
+    wx.navigateTo({
+      url: '../publish/publish',
+    })
   },
 
   /**

@@ -50,28 +50,7 @@ Page({
 
   },
 
-  onShow: function() {
-    // 获取回复列表
-    that.getReplay()
-  },
-
-  getReplay: function() {
-    // 获取回复列表
-    db.collection('replay')
-      .where({
-        t_id: that.data.id
-      })
-      .get({
-        success: function(res) {
-          // res.data 包含该记录的数据
-          console.log(res)
-          that.setData({
-            replays: res.data
-          })
-        },
-        fail: console.error
-      })
-  },
+  
   /**
    * 刷新点赞icon
    */
@@ -129,15 +108,6 @@ Page({
 
       success: that.refreshLikeIcon(false),
     });
-  },
-
-  /**
-   * 跳转回复页面
-   */
-  onReplayClick() {
-    wx.navigateTo({
-      url: "../replay/replay?id=" + that.data.id + "&openid=" + that.data.openid
-    })
   },
 
   /**

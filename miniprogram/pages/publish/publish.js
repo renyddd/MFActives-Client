@@ -98,6 +98,7 @@ Page({
         images: that.data.images,
         user: that.data.user,
         isLike: that.data.isLike,
+        ifshow:false
       },
       success: function(res) {
         // 保存到发布历史

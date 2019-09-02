@@ -9,56 +9,33 @@ Page({
     title: '',
     content: '',
     user: {},
+    contents: '13709192532'
   },
 
-  /**
-   *  获取填写的内容
+/**
+   * 复制微信号
    */
-  getTextAreaContent: function (event) {
-    this.data.content = event.detail.value;
-  },
- 
-  /**
-   * 发布
-   */
-  formSubmit: function (e) {
-    this.data.content = e.detail.value['input-content'];
-    // this.data.user = event.detail.userInfo;
-    if (this.data.canIUse) {
-      if (this.data.title.trim() != '') {
-        this.saveDataToServer();
-      } else if (this.data.content.trim() != '') {
-        this.saveDataToServer();
-      } else {
-        wx.showToast({
-          title: '给我们反馈点意见，让我们一起变得更好~',
+  copyText: function (e) {
+    console.log(e)
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
         })
       }
-
-    } else {
-      this.jugdeUserLogin();
-    }
+    }),
+      setTimeout(function () {
+        //要延时执行的代码
+        wx.navigateBack({
+          url: '../home/home',
+        })
+      }, 1000) //延迟时间
   },
-  /**
-   * 保存到发布集合中
-   */
-  saveDataToServer: function (event) {
-    var that = this;
-    that.showTipAndSwitchTab();
-    
-  },
-  /**
-   * 添加成功添加提示，切换页面
-   */
-  showTipAndSwitchTab: function (event) {
-    wx.showToast({
-      title: '反馈成功，后台会加急处理的~',
-    })
-    wx.navigateBack({
-      url: '../home/home',
-    })
-  },
- 
 
   /**
    * 生命周期函数--监听页面加载
@@ -86,6 +63,6 @@ Page({
         }
       }
     })
-  },
+  }
   
 })

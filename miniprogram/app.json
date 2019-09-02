@@ -7,14 +7,13 @@
     "pages/homeDetail/homeDetail",
     "pages/history/history",
     "pages/collect/collect",
-    "pages/advance/advance",
-    "pages/replay/replay"
+    "pages/advance/advance"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "圈  圈",
+    "navigationBarTitleText": "MFActives",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -27,12 +26,6 @@
         "text": "广场",
         "iconPath": "images/tab/home_unselect.png",
         "selectedIconPath": "images/tab/home_select.png"
-      },
-      {
-        "pagePath": "pages/publish/publish",
-        "text": "发布",
-        "iconPath": "images/tab/publish_unselect.png",
-        "selectedIconPath": "images/tab/publish_select.png"
       },
       {
         "pagePath": "pages/me/me",

@@ -42,6 +42,7 @@ Page({
         },
 
       })
+    console.log('app.globalData.openid:'+app.globalData.openid)
 
   },
   /**

@@ -40,19 +40,7 @@
     </view>
     <view class='right'>></view>
   </view>
-  <!-- 邀请好友 -->
-   <view class='line'></view>
-  <view class='item'>
-    <view class='icon'>
-      <image src='../../images/me/invitation.png' style="width:22px;height:21px;"></image>
-    </view>
-    <view class='itemName'>
-      <view>邀请好友</view>
-    </view>
-    <view class='right' bindtap='clickInvitivation'>
-      <text class='opr'>一起来玩~</text>></view>
-  </view>
-  <view class='hr'></view>
+
   <!-- 产品意见 -->
   <view class='item'  bindtap='onAdvanceClick'>
     <view class='icon'>
@@ -65,4 +53,26 @@
   </view>
   <view class='hr'></view>
 
+  <!-- 发布申请 -->
+  <view class='hr'></view>
+  <view class='item' bindtap='onPushClick'>
+    <view class='icon'>
+      <image src='../../images/publish/push_one.png' style="width:22px;height:21px;"></image>
+    </view>
+    <view class='itemName'>
+      <view>申请发布</view>
+    </view>
+    <view class='right'>></view>
+  </view>
+
 </view>
+
+
+<!-- 
+{
+        "pagePath": "pages/publish/publish",
+        "text": "发布申请",
+        "iconPath": "images/tab/publish_unselect.png",
+        "selectedIconPath": "images/tab/publish_select.png"
+      },
+ -->

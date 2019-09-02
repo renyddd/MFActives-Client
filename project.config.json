@@ -2,14 +2,14 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"appid": "wx94c08d94a06dbd82",
-	"projectname": "oo",
+	"appid": "wxaf17ace400e958e6",
+	"projectname": "MFActives",
 	"libVersion": "2.2.5",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
